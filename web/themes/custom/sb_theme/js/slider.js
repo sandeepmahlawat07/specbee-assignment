@@ -4,7 +4,7 @@ const sbSlider = ($) => {
       $(document, context).ready(function(){
         $('.slider__tabs').slick({
           infinite: true,
-          autoplay: false,
+          autoplay: true,
           dots: false,
           slidesToShow: 1,
           cssEase: 'ease-in-out',
