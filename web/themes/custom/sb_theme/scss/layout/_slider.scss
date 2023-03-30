@@ -1,0 +1,165 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.slider-section {
+    margin-bottom: 100px;
+}
+
+.slider__tabs {
+    display: flex;
+    position: relative;
+
+    .slick-arrow {
+        position: absolute;
+        top: 42%;
+        height: 50px;
+        width: 50px;
+
+        &.prev-icon {
+            left: 0;
+        }
+
+        &.next-icon {
+            right: 0;
+        }
+    }
+
+    .card__body {
+        border-bottom: 2px solid $light-grey;
+        border-left: 2px solid $light-grey;
+        border-right: 2px solid $light-grey;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        padding: 20px 30px;
+    }
+    .card__image  {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+}
+.slider__info-wrapper {
+    justify-content: center;
+    h1,h3 {
+        @media (max-width: 991.98px)  { 
+            text-align: center;
+         }
+    }
+    .text-formatted{
+        p{
+            font-size: 24px;
+            color: #a5a5a5;
+            padding-top: 8px;
+        }
+    }
+
+}
+.nav-tabs {
+    flex-wrap: nowrap;
+    .nav-link {
+        color: $secondary-blue;
+        border-bottom: 2px solid $blue;
+        width: 35%;
+        &:hover {
+            border-color: $white $white $blue;
+        }
+        &.active{
+            border-color: $white $white $blue;
+            color: $dark-grey;
+            position: relative;
+        }
+    }
+}
+
+// tooltip 
+
+.tab-wrapper{
+    .slick{
+        &-previous{
+            font-family:"Font Awesome 5 Brands";
+            content: "";
+            background-image: url('/themes/custom/sb_theme/images/left.svg');
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            z-index: 99;
+            background-repeat: no-repeat;
+            background-size: 50px;
+            top: 42%;
+            left: -85px;
+            opacity: 0.4;
+        
+            &:hover {
+                background-image: url('/themes/custom/sb_theme/images/blueleft.png');
+                opacity: 1;
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                z-index: 99;
+                background-repeat: no-repeat;
+                background-size: 30px;
+                top: 44.25%;
+                left: -76px;
+            }
+
+            @media screen and (max-width: 769px) {
+                display: none;
+            }
+        }
+
+
+        &-next {
+            content: "";
+            background-image: url('/themes/custom/sb_theme/images/right.svg');
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            z-index: 99;
+            background-repeat: no-repeat;
+            position: absolute;    
+            right: -70px;
+            background-size: 50px;
+            top: 42%;
+            opacity: 0.4;
+
+            &:hover {
+                background-image: url('/themes/custom/sb_theme/images/blueright.png');
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                z-index: 99;
+                background-repeat: no-repeat;
+                position: absolute;    
+                right: -80px;
+                background-size: 31px;
+                top: 44.25%;
+                opacity: 1;
+            }
+
+            @media screen and (max-width: 769px) {
+                display: none;
+            }
+        }
+
+        &-prev {
+            &.slick-arrow {
+                opacity: 0;
+            }
+        }
+
+        &-next {
+            &.slick-arrow {
+                opacity: 0;
+            }
+        }
+        &-slide{
+            outline: none;
+        } 
+    }
+}
+
+
+// on tabs initialise min width of slick track
+// .slick-track {
+//     min-width: 10280px;
+// }
